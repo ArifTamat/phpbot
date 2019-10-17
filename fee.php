@@ -5,7 +5,7 @@ require_once './vendor/autoload.php';
 use Kreait\Firebase\Factory;
 
 $firebase = (new Factory)
-    ->withServiceAccount('./secret/comsci-01-fa82109cee87.json')
+    ->withServiceAccount('./secret/key.json')
     // The following line is optional if the project id in your credentials file
     // is identical to the subdomain of your Firebase project. If you need it,
     // make sure to replace the URL with the URL of your project.
