@@ -85,7 +85,7 @@ $comKnowledge = $database
                           </th>
                         <td>ความรู้ด้านคอมพิวเตอร์</td>
                        
-									  <td><textarea rows="20" cols="100"><?php
+									  <td><textarea width=100%;><?php
 								      echo $comKnowledge->getChild('technology')->getValue(); 
 									  ?></textarea></td>
                         
