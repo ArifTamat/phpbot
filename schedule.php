@@ -58,7 +58,7 @@ $schedule = $database
 						<h2><b>Schedule (กำหนดการรับสมัคร)</b></h2>
 					</div>
 					<div class="col-sm-6">
-              <a class="btn btn-success" href="index.html" role="button">Back</a>
+              <a class="btn btn-success" href="home.html" role="button">Back</a>
 						</div>
                 </div>
             </div>

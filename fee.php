@@ -64,7 +64,7 @@ $fee = $database
 						<h2><b>Fee (ค่าเล่าเรียน)</b></h2>
 					</div>
 					<div class="col-sm-6">
-              <a class="btn btn-success" href="index.html" role="button">Back</a>
+              <a class="btn btn-success" href="home.html" role="button">Back</a>
 						</div>
                 </div>
             </div>
