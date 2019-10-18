@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +9,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -20,44 +24,26 @@
 </head>
 
 <body class="bg-dark">
-
-
-<div class = "container form-signin">      
-         <?php
-            $msg = '';
-            
-            if (isset($_POST['login']) && !empty($_POST['username']) 
-               && !empty($_POST['password'])) {
-				
-               if ($_POST['username'] == 'Arif' && 
-                  $_POST['password'] == '12345') {
-                  $_SESSION['valid'] = true;
-                  
-                  header("Location: home.html");
-               }else {
-                  $msg = 'Wrong username or password';
-               }
-            }
-         ?>
-    </div>
-
-
-
   <div class="container">
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Login</div>
       <div class="card-body">
 
-      <form class = "form-signin" role = "form" 
-            action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
-            ?>" method = "post">
-            <h4 class = "form-signin-heading"><?php echo $msg; ?></h4>
+
+<?php if(@$_SESSION["login_error"]!=""){ ?>
+<script>alert("<?= @$_SESSION["login_error"]; ?>");</script>
+<?php } ?>
+
+
+
+<form method="post" action="logincheck.php" class="login100-form validate-form p-b-33 p-t-5">
+           
             <input type = "text" class = "form-control" 
-               name = "username" placeholder = "username" 
-               required autofocus></br>
+               name = "username" placeholder = "username"  required autofocus></br>
+
             <input type = "password" class = "form-control"
-               name = "password" placeholder = "password" required>
-               <br></>
+               name = "password" placeholder = "password" required><br></>
+
             <button class = "btn btn-lg btn-primary btn-block" type = "submit" 
                name = "login">Login</button>
          </form>

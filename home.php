@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(empty($_SESSION['username'])){
+  header("Location: login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +12,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -23,9 +30,10 @@
 <body id="page-top">
 
 
+
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
     
-    <a class="navbar-brand mr-1" href="index.html">Pee-Com-Pile
+    <a class="navbar-brand mr-1" href="home.php">Pee-Com-Pile
    <img src="https://firebasestorage.googleapis.com/v0/b/comsci-01.appspot.com/o/profile.jpg?alt=media&token=f2fa3cdb-b44d-4277-a29a-57d17d9efd52" class="rounded-circle" class="img-fluid z-depth-3 rounded" alt="Sample image">
     
     </a>
@@ -65,11 +73,11 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="home.php">
           <i class="fas fa-home"></i>
           <span>Dashboard</span>
         </a>
-        <a class="nav-link" href="login.php">
+        <a class="nav-link" href="logout.php">
           <span>Logout</span>
         </a>
       </li> 

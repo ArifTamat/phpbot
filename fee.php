@@ -42,7 +42,7 @@ $fee = $database
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Bootstrap CRUD Data Table for Database with Modal Form</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -64,7 +64,7 @@ $fee = $database
 						<h2><b>Fee (ค่าเล่าเรียน)</b></h2>
 					</div>
 					<div class="col-sm-6">
-              <a class="btn btn-success" href="home.html" role="button">Back</a>
+              <a class="btn btn-success" href="home.php" role="button">Back</a>
 						</div>
                 </div>
             </div>

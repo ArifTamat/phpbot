@@ -38,7 +38,7 @@ $schedule = $database
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Schedule</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -58,7 +58,7 @@ $schedule = $database
 						<h2><b>Schedule (กำหนดการรับสมัคร)</b></h2>
 					</div>
 					<div class="col-sm-6">
-              <a class="btn btn-success" href="home.html" role="button">Back</a>
+              <a class="btn btn-success" href="home.php" role="button">Back</a>
 						</div>
                 </div>
             </div>
@@ -82,7 +82,7 @@ $schedule = $database
                           </th>
                         <td>กำหนดการรับสมัคร</td>
                        
-									  <td><textarea rows="20" cols="100"><?php
+									  <td><textarea rows="15" cols="60"><?php
 								      echo $schedule->getChild('portfolio')->getValue(); 
 									  ?></textarea></td>
                         
