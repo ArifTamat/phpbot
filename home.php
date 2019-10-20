@@ -7,7 +7,7 @@ if(empty($_SESSION['username'])){
 
 <!DOCTYPE html>
 <html lang="en">
-
+<title>Home</title>
 <head>
 
   <meta charset="utf-8">

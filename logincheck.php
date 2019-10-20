@@ -6,7 +6,7 @@ session_start();
                && !empty($_POST['password'])) {
 				
                if ($_POST['username'] == 'Arif' && 
-                  $_POST['password'] == '12345') {
+                  $_POST['password'] == '451031225') {
 
                     $_SESSION["username"] = $_POST;
                     header("Location: home.php");
