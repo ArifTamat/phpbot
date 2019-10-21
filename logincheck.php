@@ -5,7 +5,7 @@ session_start();
             if (isset($_POST['login']) && !empty($_POST['username']) 
                && !empty($_POST['password'])) {
 				
-               if ($_POST['username'] == 'Arif' && 
+               if ($_POST['username'] == 'Admin' && 
                   $_POST['password'] == '451031225') {
 
                     $_SESSION["username"] = $_POST;
