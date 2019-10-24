@@ -1,42 +1,17 @@
+
+
 <?php
-
 require_once './vendor/autoload.php';
-
 use Kreait\Firebase\Factory;
-
 $firebase = (new Factory)
     ->withServiceAccount('./secret/key.json')
-    // The following line is optional if the project id in your credentials file
-    // is identical to the subdomain of your Firebase project. If you need it,
-    // make sure to replace the URL with the URL of your project.
     ->withDatabaseUri('https://comsci-01.firebaseio.com')
 	->create();
 
 	$database = $firebase->getDatabase();
-
-	if(isset($_POST['save']))
-	{	
-       
-		$Rate=$_POST['Rate'];
-
-		$fee = $database
-        ->getReference('Fee');
-
-	    $fee->getChild('Rate')->set((int)$Rate);
-			
-	  header("Location: fee.php");
-	}
-
-
-
-
-$fee = $database
-->getReference('Fee');
-
-
-?>        
-
-
+	$fee = $database
+    ->getReference('Fee');
+?> 
 <!DOCTYPE html>
 <html lang="en">
 <title>Fee</title>
@@ -55,8 +30,18 @@ $fee = $database
 
 </head>
 <body>
+<?php	
 
-
+if(isset($_POST['save']))
+	{	
+		$Rate=$_POST['Rate'];
+		$fee = $database
+        ->getReference('Fee');
+		$fee->getChild('Rate')->set((int)$Rate);
+		
+	    header("Location: fee.php");
+	}
+?>
     <div class="container">
         <div class="table-wrapper">
             <div class="table-title">
@@ -122,11 +107,11 @@ $fee = $database
 							<p>***กรอกเฉพาะตัวเลขเท่านั้น</p>
 			</tr>
 						</div>
-						
+
 					</div>
 					<div class="modal-footer">
 						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-						<input type="submit" name="save" value="save" class="btn btn-info">
+						<input type="submit" name="save" value="save" class="btn btn-info" onclick="return confirm('ยืนยันการเปลี่ยนแปลงข้อมูล')" />
 					</div>
 				</form>
 			</div>

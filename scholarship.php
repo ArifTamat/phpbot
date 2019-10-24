@@ -125,7 +125,7 @@ $scholarship = $database
 					</div>
 					<div class="modal-footer">
 						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-						<input type="submit" name="save" value="save" class="btn btn-info" >
+						<input type="submit" name="save" value="save" class="btn btn-info"onclick="return confirm('ยืนยันการเปลี่ยนแปลงข้อมูล')" />
 					</div>
 				</form>
 			</div>
