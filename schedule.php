@@ -12,24 +12,71 @@ $firebase = (new Factory)
 
 $database = $firebase->getDatabase();
 
+//อ่าน กำหนดการรับสมัคร
+$schedule = $database
+    ->getReference('schedule');
+
 if(isset($_POST['save']))
 	{	
-       
-		$portfolio=$_POST['portfolio'];
+       //รอบปัจจุบัน
+		$current=$_POST['current'];
 
 		$schedule = $database
         ->getReference('schedule');
 
-	    $schedule->getChild('portfolio')->set($portfolio);
+	    $schedule->getChild('current')->set($current);
 			
-	    header("Location: schedule.php");
+		header("Location: schedule.php");
+		
+		//รอบที่1
+	}elseif (isset($_POST['save1'])) {
+
+		$round1=$_POST['round1'];
+
+		$schedule = $database
+        ->getReference('schedule');
+
+	    $schedule->getChild('round1')->set($round1);
+			
+		header("Location: schedule.php");
+		
+		//รอบที่2
+	}elseif (isset($_POST['save2'])) {
+
+		$round2=$_POST['round2'];
+
+		$schedule = $database
+        ->getReference('schedule');
+
+	    $schedule->getChild('round2')->set($round2);
+			
+		header("Location: schedule.php");
+
+		//รอบที่3
+	}elseif (isset($_POST['save3'])) {
+
+		$round3=$_POST['round3'];
+
+		$schedule = $database
+        ->getReference('schedule');
+
+	    $schedule->getChild('round3')->set($round3);
+			
+		header("Location: schedule.php");
+		
+		//รอบที่4
+	}elseif (isset($_POST['save4'])) {
+
+		$round4=$_POST['round4'];
+
+		$schedule = $database
+        ->getReference('schedule');
+
+	    $schedule->getChild('round4')->set($round4);
+			
+		header("Location: schedule.php");
+		
 	}
-
-
-
-//อ่าน กำหนดการรับสมัคร
-$schedule = $database
-    ->getReference('schedule');
 ?>        
 
 
@@ -62,41 +109,90 @@ $schedule = $database
               <a class="btn btn-success" href="home.php" role="button">Back</a>
 						</div>
                 </div>
-            </div>
+			</div>
+			
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-						<th>
-							
-						</th>
-                        <th>Name</th>
-                        
+                        <th style="width: 19%;">Name</th>                       
                         <th>Data</th>
                         <th>Actions</th>
                     </tr>
-				</thead>
-				
+				</thead>			
+
                 <tbody>
+					
+				<!-- รอบรวม -->
                     <tr>
-                      	<th>
+                        <td style="font-weight:bold">กำหนดการรับสมัครรวม</td>
+							<td><textarea rows="15" cols="100"><?php 
+							echo $schedule->getChild('round1')->getValue();
+							echo "\n\n";
+							echo $schedule->getChild('round2')->getValue();
+							echo "\n\n";
+							echo $schedule->getChild('round3')->getValue();
+							echo "\n\n";
+							echo $schedule->getChild('round4')->getValue();
+							?>
 							
-                          </th>
-                        <td>กำหนดการรับสมัคร</td>
-                       
-									  <td><textarea rows="15" cols="60"><?php
-								      echo $schedule->getChild('portfolio')->getValue(); 
-									  ?></textarea></td>
-                        
-                        <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+						  </textarea></td>                       
+                           <td>
+                            <!-- <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a> -->
                            </td>
-                    </tr>
-                    <tr>
-					<tr>                       
-           </table>
+					</tr>
+					
+					<!-- รอบปัจจุบัน -->
+					<tr>
+                        <td style="font-weight:bold">รอบปัจจุบัน</td>
+							<td><textarea rows="10" cols="100"> <?php 
+							echo $schedule->getChild('current')->getValue();
+							?> </textarea></td>                       
+                        <td>
+                            <a href="#editEmployeeModalCr" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                           </td>
+					</tr>
+
+					<!-- รอบที่1 -->
+					<tr>
+                        <td style="font-weight:bold">รอบที่ 1</td>
+							<td><textarea rows="10" cols="100"><?php echo $schedule->getChild('round1')->getValue(); ?></textarea></td>                       
+                        <td>
+                            <a href="#editEmployeeModal1" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                           </td>
+					</tr>
+
+					<!-- รอบที่2 -->
+					<tr>
+                        <td style="font-weight:bold">รอบที่ 2</td>
+							<td><textarea rows="10" cols="100"><?php echo $schedule->getChild('round2')->getValue(); ?></textarea></td>                       
+                        <td>
+                            <a href="#editEmployeeModal2" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                           </td>
+					</tr>
+
+					<!-- รอบที่3 -->
+					<tr>
+                        <td style="font-weight:bold">รอบที่ 3</td>
+							<td><textarea rows="10" cols="100"><?php echo $schedule->getChild('round3')->getValue(); ?></textarea></td>                       
+                        <td>
+                            <a href="#editEmployeeModal3" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                           </td>
+					</tr>
+
+					<!-- รอบที่4 -->
+					<tr>
+                        <td style="font-weight:bold">รอบที่ 4</td>
+							<td><textarea rows="10" cols="100"><?php echo $schedule->getChild('round4')->getValue(); ?></textarea></td>                       
+                        <td>
+                            <a href="#editEmployeeModal4" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                           </td>
+					</tr>
+                                  
+		   </table>
+		   
 
 	<!-- Edit Modal HTML -->
-	<div id="editEmployeeModal" class="modal fade">
+	<!-- <div id="editEmployeeModal" class="modal fade">
 		<div class="modal-dialog">
 			<div class="modal-content">
 
@@ -106,20 +202,13 @@ $schedule = $database
 						<h4 class="modal-title">Edit schedule</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
-					<div class="modal-body">					
-						
-						
-						<div class="form-group">
-
-							<!-- <td><input type="text" name="portfolio" value=<?php echo $schedule->getChild('portfolio')->getValue();
-							?>></td> -->
-							
+					<div class="modal-body">																
+						<div class="form-group">						
 							<td>
 							<textarea name="portfolio" rows="20" cols="48"><?php echo $schedule->getChild('portfolio')->getValue();
 							?></textarea>
 							</td>
-
-			</tr>
+							</tr>
 						</div>
 						
 					</div>
@@ -128,9 +217,168 @@ $schedule = $database
 						<input type="submit" name="save" value="save" class="btn btn-info"onclick="return confirm('ยืนยันการเปลี่ยนแปลงข้อมูล')" />
 					</div>
 				</form>
+
+			</div>
+		</div>
+	</div> -->
+
+	<!-- Edit รอบปัจจุบัน -->
+	<div id="editEmployeeModalCr" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<form name="update_user" method="post" action="schedule.php">
+					<div class="modal-header">
+
+						<h4 class="modal-title">Edit Schedule Current</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">																
+						<div class="form-group">						
+							<td>
+							<textarea name="current" rows="20" cols="48"><?php echo $schedule->getChild('current')->getValue();
+							?></textarea>
+							</td>
+							</tr>
+						</div>
+						
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+						<input type="submit" name="save" value="save" class="btn btn-info"onclick="return confirm('ยืนยันการเปลี่ยนแปลงข้อมูล')" />
+					</div>
+				</form>
+
 			</div>
 		</div>
 	</div>
+
+
+	<!-- Edit รอบที่ 1 -->
+	<div id="editEmployeeModal1" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<form name="update_user" method="post" action="schedule.php">
+					<div class="modal-header">
+
+						<h4 class="modal-title">Edit Schedule Round 1</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">																
+						<div class="form-group">						
+							<td>
+							<textarea name="round1" rows="20" cols="48"><?php echo $schedule->getChild('round1')->getValue();
+							?></textarea>
+							</td>
+							</tr>
+						</div>
+						
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+						<input type="submit" name="save1" value="save" class="btn btn-info"onclick="return confirm('ยืนยันการเปลี่ยนแปลงข้อมูล')" />
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Edit รอบที่ 2 -->
+	<div id="editEmployeeModal2" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<form name="update_user" method="post" action="schedule.php">
+					<div class="modal-header">
+
+						<h4 class="modal-title">Edit Schedule Round 2</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">																
+						<div class="form-group">						
+							<td>
+							<textarea name="round2" rows="20" cols="48"><?php echo $schedule->getChild('round2')->getValue();
+							?></textarea>
+							</td>
+							</tr>
+						</div>
+						
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+						<input type="submit" name="save2" value="save" class="btn btn-info"onclick="return confirm('ยืนยันการเปลี่ยนแปลงข้อมูล')" />
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Edit รอบที่ 3 -->
+	<div id="editEmployeeModal3" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<form name="update_user" method="post" action="schedule.php">
+					<div class="modal-header">
+
+						<h4 class="modal-title">Edit Schedule Round 3</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">																
+						<div class="form-group">						
+							<td>
+							<textarea name="round3" rows="20" cols="48"><?php echo $schedule->getChild('round3')->getValue();
+							?></textarea>
+							</td>
+							</tr>
+						</div>
+						
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+						<input type="submit" name="save3" value="save" class="btn btn-info"onclick="return confirm('ยืนยันการเปลี่ยนแปลงข้อมูล')" />
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Edit รอบที่ 4 -->
+	<div id="editEmployeeModal4" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<form name="update_user" method="post" action="schedule.php">
+					<div class="modal-header">
+
+						<h4 class="modal-title">Edit Schedule Round 4</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">																
+						<div class="form-group">						
+							<td>
+							<textarea name="round4" rows="20" cols="48"><?php echo $schedule->getChild('round4')->getValue();
+							?></textarea>
+							</td>
+							</tr>
+						</div>
+						
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+						<input type="submit" name="save4" value="save" class="btn btn-info"onclick="return confirm('ยืนยันการเปลี่ยนแปลงข้อมูล')" />
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+	
 	
 </body>
 </html>
