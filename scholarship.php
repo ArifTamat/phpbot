@@ -98,7 +98,7 @@ $scholarship = $database
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-						<h2><b>Scholarship (ทุนการศึกษา)</b></h2>
+						<h2><b>Scholarships (ทุนการศึกษา)</b></h2>
 					</div>
 					<div class="col-sm-6">
               <a class="btn btn-success" href="home.php" role="button">Back</a>
@@ -163,7 +163,7 @@ $scholarship = $database
 				<form name="update_user" method="post" action="scholarship.php">
 					<div class="modal-header">
 
-						<h4 class="modal-title">Edit Scholarship</h4>
+						<h4 class="modal-title">Edit Student Loan Fund</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">					
@@ -191,7 +191,7 @@ $scholarship = $database
 				<form name="update_user" method="post" action="scholarship.php">
 					<div class="modal-header">
 
-						<h4 class="modal-title">Edit Scholarship</h4>
+						<h4 class="modal-title">Edit Teacher Scholarships</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">					
@@ -219,7 +219,7 @@ $scholarship = $database
 				<form name="update_user" method="post" action="scholarship.php">
 					<div class="modal-header">
 
-						<h4 class="modal-title">Edit Scholarship</h4>
+						<h4 class="modal-title">Edit Bank Scholarships</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">					
@@ -247,7 +247,7 @@ $scholarship = $database
 				<form name="update_user" method="post" action="scholarship.php">
 					<div class="modal-header">
 
-						<h4 class="modal-title">Edit Scholarship</h4>
+						<h4 class="modal-title">Edit Company Scholarships</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">					
@@ -275,7 +275,7 @@ $scholarship = $database
 				<form name="update_user" method="post" action="scholarship.php">
 					<div class="modal-header">
 
-						<h4 class="modal-title">Edit Scholarship</h4>
+						<h4 class="modal-title">Edit Other Scholarships</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">					

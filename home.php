@@ -34,7 +34,7 @@ if(empty($_SESSION['username'])){
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
     
-    <a class="navbar-brand mr-1" href="home.php">Pee-Com-Pile
+    <a class="navbar-brand mr-1" href="home.php">Pee Com Pile
    <img src="https://firebasestorage.googleapis.com/v0/b/comsci-01.appspot.com/o/profile.jpg?alt=media&token=f2fa3cdb-b44d-4277-a29a-57d17d9efd52" class="rounded-circle" class="img-fluid z-depth-3 rounded" alt="Sample image">
     
     </a>

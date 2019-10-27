@@ -40,15 +40,14 @@ session_start();
 <form method="post" action="logincheck.php" class="login100-form validate-form p-b-33 p-t-5">
            
             <input type = "text" class = "form-control" 
-               name = "username" placeholder = "username"  required autofocus></br>
+               name = "username" placeholder = "username"  required autofocus><br>
 
             <input type = "password" class = "form-control"
-               name = "password" placeholder = "password" required><br></>
-
+               name = "password" placeholder = "password" required><br>
             <button class = "btn btn-lg btn-primary btn-block" type = "submit" 
                name = "login">Login</button>
-         </form>
-
+</form>
+         
 
         <!-- <div class="text-center">
           <a class="d-block small mt-3" href="register.html">Register an Account</a>
