@@ -106,7 +106,10 @@ if(isset($_POST['save']))
 						<h2><b>Schedule (กำหนดการรับสมัคร)</b></h2>
 					</div>
 					<div class="col-sm-6">
-              <a class="btn btn-success" href="home.php" role="button">Back</a>
+					
+					
+			  <a class="btn btn-success" href="home.php" role="button">Back</a>
+			  <a class="btn btn-primary" href="proof.php" role="button">หลักฐานการสมัคร</a>
 						</div>
                 </div>
 			</div>
