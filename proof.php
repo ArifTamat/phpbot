@@ -69,7 +69,7 @@ if(isset($_POST['save']))
                 <tbody>
                     <tr>
                         <td style="font-weight:bold">หลักฐานการสมัคร</td>
-						<td><?php echo $schedule->getChild('evidence')->getValue(); ?></td>
+						<td><textarea rows="15" cols="100"><?php echo $schedule->getChild('evidence')->getValue(); ?></textarea></td>
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                            </td>
