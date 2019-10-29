@@ -35,7 +35,7 @@ if(empty($_SESSION['username'])){
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
     
     <a class="navbar-brand mr-1" href="home.php">Pee Com Pile
-   <img src="https://firebasestorage.googleapis.com/v0/b/comsci-01.appspot.com/o/profile.jpg?alt=media&token=f2fa3cdb-b44d-4277-a29a-57d17d9efd52" class="rounded-circle" class="img-fluid z-depth-3 rounded" alt="Sample image">
+   <img src="" class="rounded-circle" class="img-fluid z-depth-3 rounded" alt="Sample image">
     
     </a>
     
@@ -43,7 +43,7 @@ if(empty($_SESSION['username'])){
     <ul class="navbar-nav ml-auto ml-md-0">
       <li class="nav-item dropdown no-arrow mx-1">
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
-          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="https://firebasestorage.googleapis.com/v0/b/comsci-01.appspot.com/o/newpro.jpg?alt=media&token=81e23976-ba37-4c3f-987c-2d887490c8af#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
